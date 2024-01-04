@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="titleTextView" type="id" />
+    <item name="authorTextView" type="id" />
+    <item name="summaryTextView" type="id" />
+</resources>

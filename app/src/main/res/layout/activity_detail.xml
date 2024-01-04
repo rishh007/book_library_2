@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_detail.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/titleTextView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#36FFEB3B">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="143dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="625dp"
+        android:background="#DFDAB0"
+        android:backgroundTint="#AC9758"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        tools:ignore="VisualLintOverlap" />
+
+    <TextView
+        android:id="@+id/authoTextView"
+        android:layout_width="122dp"
+        android:layout_height="29dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="494dp"
+        android:text="@string/author"
+        android:textAlignment="center"
+        android:textColor="#390202"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/summarytextView"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="326dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="361dp"
+        android:text="@string/summary" />
+
+</RelativeLayout>
