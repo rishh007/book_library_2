@@ -1,0 +1,12 @@
+<!-- res/menu/drawer_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_summary_100_words"
+        android:title="Summary in 100 Words" />
+    <item
+        android:id="@+id/menu_summary_200_words"
+        android:title="Summary in 200 Words" />
+    <item
+        android:id="@+id/menu_send_feedback"
+        android:title="Send Feedback" />
+</menu>

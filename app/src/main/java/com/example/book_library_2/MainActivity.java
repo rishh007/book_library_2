@@ -2,27 +2,34 @@ package com.example.book_library_2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-// MainActivity.java
-public class MainActivity extends AppCompatActivity {   ///sets the page layout
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ListView listView;
     private List<Book> bookList;
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = findViewById(R.id.listView);
+        drawer = findViewById(R.id.drawerLayout);
+        NavigationView navigationView = findViewById(R.id.navigationView);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        ListView listView = findViewById(R.id.listView);
         bookList = generateSampleBooks();
         BookAdapter adapter = new BookAdapter(this, bookList);
         listView.setAdapter(adapter);
@@ -36,9 +43,47 @@ public class MainActivity extends AppCompatActivity {   ///sets the page layout
         });
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() != android.R.id.home) {
+            return super.onOptionsItemSelected(item);
+        }
+        drawer.openDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_summary_100_words:
+                openSummaryActivity(100);
+                break;
+            case R.id.menu_summary_200_words:
+                openSummaryActivity(200);
+                break;
+            case R.id.menu_send_feedback:
+                openFeedbackActivity();
+                break;
+        }
+
+        drawer.closeDrawers();
+        return true;
+    }
+
+    private void openSummaryActivity(int wordCount) {
+        Intent intent = new Intent(this, SummaryActivity.class);
+        intent.putExtra("wordCount", wordCount);
+        startActivity(intent);
+    }
+
+    private void openFeedbackActivity() {
+        Intent intent = new Intent(this, FeedbackActivity.class);
+        startActivity(intent);
+    }
+
     private void openDetailActivity(Book book) {
-        Intent intent = new Intent(this, DetailActivity.class); //intent created
-        intent.putExtra("title", book.getTitle());  //putextra() is a method in the Intent class used to attach/add additional data to an Intent before it's passed to another component such as activity, service, or broadcast receiver
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra("title", book.getTitle());
         intent.putExtra("author", book.getAuthor());
         intent.putExtra("summary", book.getSummary());
         intent.putExtra("number", book.getCount());

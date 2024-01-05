@@ -3,4 +3,7 @@
     <item name="titleTextView" type="id" />
     <item name="authorTextView" type="id" />
     <item name="summaryTextView" type="id" />
+    <item name="drawerLayout" type="id" />
+    <item name="wordCountTextView" type="id" />
+    <item name="listView" type="id" />
 </resources>
