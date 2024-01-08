@@ -1,0 +1,5 @@
+<!-- res/drawable/genre_tile_self_help.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#f24b3c"/> <!-- Set your desired color -->
+    <corners android:radius="8dp"/>
+</shape>

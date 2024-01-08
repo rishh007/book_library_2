@@ -11,4 +11,9 @@
     <string name="submit">SUBMIT</string>
     <string name="navigation_drawer" />
     <string name="navigation_drawer_close" />
+    <string name="fiction">Fiction</string>
+    <string name="non_fiction">Non-Fiction</string>
+    <string name="economics">Economics</string>
+    <string name="biography">Biography</string>
+    <string name="self_help">Self-Help</string>
 </resources>

@@ -1,0 +1,72 @@
+<!-- activity_home.xml -->
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:layout_gravity="center"
+    android:padding="16dp">
+
+    <!-- Add square-shaped tiles for each genre -->
+    <Button
+        android:id="@+id/btnFiction"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:background="@drawable/genre_tile_fiction"
+        android:text="@string/fiction"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnNon_fiction"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:background="@drawable/genre_tile_nonfiction"
+        android:text="@string/non_fiction"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnEconomics"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:background="@drawable/genre_tile_economics"
+
+        android:text="@string/economics"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnBiography"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:background="@drawable/genre_tile_biography"
+        android:text="@string/biography"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnSelf_Help"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:background="@drawable/genre_tile_selfhelp"
+        android:text="@string/self_help"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"/>
+
+</GridLayout>

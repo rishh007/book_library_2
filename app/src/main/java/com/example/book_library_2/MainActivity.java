@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +25,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
+
+        GridLayout gridLayout = findViewById(R.id.gridLayout);
+
+        Button btnFiction = findViewById(R.id.btnFiction);
+        btnFiction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBookListActivity("Fiction"); // Pass the genre name
+            }
+        });
+
+        private void openBookListActivity(String genre) {
+            Intent intent = new Intent(this, BookListActivity.class);
+            intent.putExtra("genre", genre);
+            startActivity(intent);
+        }
+        // TODO: Implement logic for handling genre tile clicks and opening corresponding book lists
+
 
         drawer = findViewById(R.id.drawerLayout);
         NavigationView navigationView = findViewById(R.id.navigationView);
