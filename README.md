@@ -10,3 +10,5 @@ The 5-6 options on the homepage should be contained/ displayed within square sha
 (5) There will be another tab / or another tile on the homepage (Main activity ) in the app containing a database of the Book title + Author.
 <br>
 This entire app will be made in Android Studio using JAVA and xml.
+<br>
+You are welcome to contribute to this app
